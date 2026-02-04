@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Add a New Sample Request
+        a(href="/") Return to the homepage
+        .form-wrapper
+            form(method="POST" action="/update-cobj")
+                label(for="sample_request_number") Sample No
+                input(type="text" id="sample_request_number" name="sample_request_number" required)
+                
+                label(for="apply_date") Apply Date
+                input(type="text" id="apply_date" name="apply_date" required)
+                
+                label(for="customer_need_date") Need Date
+                input(type="text" id="customer_need_date" name="customer_need_date" required)
+                
+                input(type="submit" value="Add Sample Request")

@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Sample Requests Custom Object
+        a(href="/update-cobj") Add to this table
+        table
+            thead
+                tr
+                    th Sample No
+                    th Apply Date
+                    th Need Date
+            tbody
+                each sample in data
+                    tr
+                        td #{sample.properties.sample_request_number}
+                        td #{sample.properties.apply_date}
+                        td #{sample.properties.customer_need_date}
