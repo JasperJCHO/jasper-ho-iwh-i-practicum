@@ -4,7 +4,7 @@ This repository is for the Integrating With HubSpot I: Foundations course. This 
 
 To read the full directions, please go to the [practicum instructions](https://app.hubspot.com/academy/l/tracks/1092124/1093824/5493?language=en).
 
-https://app-na2.hubspot.com/contacts/243090547/objects/2-221527703/views/all/list?prefetch=
+https://app-na2.hubspot.com/contacts/243090547/objects/2-221527703/views
 
 ___
 ## Tips:
