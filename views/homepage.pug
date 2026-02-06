@@ -13,9 +13,11 @@ html
                     th Sample No
                     th Apply Date
                     th Need Date
+                    th Urgent
             tbody
                 each sample in data
                     tr
                         td #{sample.properties.sample_request_number}
                         td #{sample.properties.apply_date}
                         td #{sample.properties.customer_need_date}
+                        td #{sample.properties.urgent_flag ? 'Yes' : 'No'}

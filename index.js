@@ -19,7 +19,7 @@ const CUSTOM_OBJECT_TYPE = '2-221479768';
 
 // * Code for Route 1 goes here
 app.get('/', async (req, res) => {
-    const samplesUrl = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}?properties=sample_request_number,apply_date,customer_need_date`;
+    const samplesUrl = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}?properties=sample_request_number,apply_date,customer_need_date,urgent_flag`;
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
@@ -49,7 +49,8 @@ app.post('/update-cobj', async (req, res) => {
         properties: {
             sample_request_number: req.body.sample_request_number,
             apply_date: req.body.apply_date,
-            customer_need_date: req.body.customer_need_date
+            customer_need_date: req.body.customer_need_date,
+            urgent_flag: req.body.urgent_flag === 'on' ? true : false
         }
     };
 
